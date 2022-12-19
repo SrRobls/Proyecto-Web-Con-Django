@@ -1,0 +1,31 @@
+.contenido_servicios{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios_info{
+    width: 70%;
+    margin: 20px 0;
+    border: solid 4px aquamarine;
+    border-radius: 5%;
+    color: white;
+    text-align: center;
+}
+
+.servicios_info h2{
+    font-size: 25px;
+}
+
+.servicios_info p{
+    font-size: 25px;
+    margin: 10px 20px;
+}
+
+.servicios_info img{
+    width: 70%;
+    height: 400px;
+    margin-bottom: 20px;
+}

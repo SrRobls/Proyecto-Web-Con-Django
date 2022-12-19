@@ -1,0 +1,56 @@
+.contenedor_tienda{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0px auto;
+}
+
+.producto img{
+    width: 200px;
+    height: 220px;
+}
+
+.producto p{
+    color: white;
+    font-size: bold;
+    text-align: center;
+    font-weight: bold;
+}
+
+.producto{
+    margin: 20px 30px;
+    border: solid 4px aquamarine;
+    border-radius: 5%;
+}
+
+.btn{
+    display: block;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
+    border: solid 1px aquamarine;
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    margin: 4px auto;
+}
+
+/* .carrito p{
+    position: absolute;
+    left: 1150px;
+    top: 190px;
+    
+} */
+
+.carrito{
+    position: absolute;
+    left: 1060px;
+    top: 190px;
+    color: white;
+}
+
+.carrito table{
+    border: solid 2px aquamarine;
+}

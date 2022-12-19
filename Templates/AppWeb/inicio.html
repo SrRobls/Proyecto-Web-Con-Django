@@ -1,0 +1,48 @@
+{% extends "AppWeb/base.html" %}
+{% load static %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'CSS/inicio_estilos.css' %}">
+    <div class="contenido_inicio">
+        <section class="texto_inicial">
+            <p>
+                Este es un proyecto de practica en la cual usamos Django como framework de backend, (no usamos alguno del frontend, aun). En la cual practicaré, al menos, a  nivel general, como usar este framework. Django es muy sencillo de utilizar y me parece bueno para ser la primera herramienta del backend a aprender.
+                En este proyecto haremos una tinda online en el cual usuario pueden comprar varios articulos.<br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime recusandae quae harum minus, odit facilis ut minima eveniet eligendi tenetur, debitis mollitia facere expedita eius commodi repudiandae voluptate similique? Ipsum!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae rerum, quasi nulla, quas eveniet quis, obcaecati ratione ipsa et accusamus incidunt? Ad earum necessitatibus, optio nihil labore architecto eos. Eum!
+            </p>
+        </section>
+        <section class="caracteristicas">
+            <ul>
+                <li>
+                    <picture>
+                        <img src="{% static 'imgs/24-horas.png' %}" alt="24 horas">
+                    </picture>
+                    <p>
+                        <strong>Disponible Las 24 Horas.</strong><br>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim libero nesciunt ipsum quae ex? Minus laudantium ipsam saepe laboriosam corrupti quae. Nesciunt ut recusandae odio consequuntur praesentium distinctio quisquam voluptatem.
+                    </p>
+                </li>
+                <li>
+                    <picture>
+                        <img src="{% static 'imgs/servicio-al-cliente.png' %}" alt="servicios al cliente">
+                    </picture>
+                    <p>
+                        <strong>Un Excelente Servicio Al Cliente.</strong><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit natus expedita non numquam vel optio aspernatur id soluta. Vero quisquam maxime esse? Nulla, obcaecati dicta corrupti nisi dolorum numquam officiis.
+                    </p>
+                </li>
+                <li>
+                    <picture>
+                        <img src="{% static 'imgs/comprobado.png' %}" alt="comprobado">
+                    </picture>
+                    <p>
+                        <strong>Todos Nuestros Productos 100% Comprobados.</strong><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, maxime nesciunt? Reprehenderit iure totam eum. Quasi porro amet explicabo commodi asperiores, quas magnam dolores, molestiae nemo temporibus excepturi, omnis veniam.
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </div>
+{% endblock %}
+

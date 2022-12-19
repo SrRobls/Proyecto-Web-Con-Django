@@ -1,0 +1,20 @@
+{% extends "AppWeb/base.html" %}
+{% load static %}
+{% block title %} Contacto {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'CSS/contacto.css' %}">
+<div class="contacto">
+    <br><br><br><br>
+    <form action="" method="post">
+        {% if "valido/" in request.GET %}
+            <p style="color: white;">Informacion Enviada</p>
+        {% endif %}
+        {% csrf_token %}
+        <table style="color: white;">{{contacto.as_table}}</table>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+    <br><br><br><br><br><br><br>
+{% endblock %}

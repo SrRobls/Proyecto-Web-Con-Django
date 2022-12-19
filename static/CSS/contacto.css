@@ -1,0 +1,12 @@
+.contacto{
+    height: auto;
+}
+
+.contacto form{
+    width: 30%;
+    height: inherit;
+    margin: 0px auto;
+    border: solid 4px aquamarine;
+    border-radius: 5%;
+    color: white;
+}

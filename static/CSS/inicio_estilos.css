@@ -1,0 +1,35 @@
+.contenido_inicio p{
+    color: white;
+}
+
+.contenido_inicio{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto_inicial{
+    width: 700px;
+    text-align:justify;
+    border: solid 4px aquamarine;
+    margin: 40px 0px;
+    padding: 30px;
+}
+
+.caracteristicas{
+    width: 80%;
+}
+
+.caracteristicas li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px;
+}

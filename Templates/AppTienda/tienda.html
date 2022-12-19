@@ -1,0 +1,28 @@
+{% extends "AppWeb/base.html" %}
+{% load static %}
+{% block title %} Tienda {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'CSS/tienda.css' %}">
+    <div class="carrito">
+        {% if request.user.is_authenticated %}
+            {% include "AppCarro/widget.html" %}
+        {% else %}
+            Haz Login Para Acceder Al Carrito
+        {% endif %}
+    </div>
+    <div class="contenedor_tienda">
+    {% for producto in productos %}
+        <div class="producto">
+            <p>{{producto.nombre}}</p>
+            <picture>
+                <img src="{{producto.imagen.url}}" alt="producto imagen">
+            </picture>
+            <p>💲 {{producto.precio}}</p>
+            <a href="{% url 'carro:agregar' producto.id %}" class="btn">Agregar Al Carrito</a>
+        </div>
+    {% endfor %}
+    </div>
+    
+{% endblock %}

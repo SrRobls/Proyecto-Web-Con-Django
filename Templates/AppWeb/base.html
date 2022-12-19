@@ -1,0 +1,63 @@
+<!-- Debemos si o si debemos cargar static, que recordemos es la carpeta de los archivos css, imagenes, etc. -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <!-- usamos {% static 'subcarpeta(si hay)/archivos estaticos' %} para linkear los archivos estaticos-->
+    
+    <title>
+        {% block title %} 
+
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header class="seccion_header">
+        <h1>
+            Proyecto Web Con Django
+        </h1>
+
+        <div class="superior" style="text-align: right; padding-right: 50px; color: white; background-color: aquamarine; font-weight: bolder;">
+            {% if user.is_authenticated %}
+
+                Hola {{user.username}}! &nbsp;&nbsp; <a href="{% url 'cerrar_login' %}">Logout</a>
+
+            {% else %}
+                <a href="{% url 'Login' %}">Login</a> &nbsp;&nbsp; <a href="{% url 'autenticacion' %}">Register</a>
+            {% endif %}
+
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li class=""><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li class=""><a href="{% url 'servicios' %}">Servicios</a></li>
+                <li class=""><a href="{% url 'tienda' %}">Tienda</a></li>
+                <li class=""><a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="contenido">
+    {% block content %} 
+
+    {% endblock %}
+    
+    </div>
+    <footer class="seccion_footer">
+        <ul>
+            <li>Privacidad</li>
+            <li>Aviso Legal</li>
+            <li>Cookies</li>
+        </ul>
+        <p>Proyecto Web 2022</p>
+    </footer>
+</body>
+</html>
